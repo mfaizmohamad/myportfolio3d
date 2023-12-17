@@ -15,13 +15,13 @@ const Hero = () => {
           className="flex flex-col justify-center items-center
         mt-5"
         >
-          <div className="w-5 h-5 rounded-full bg-[#915eff]" />
-          <div className="w-1 sm:h-80 h-40 violet-gradient" />
+          <div className="w-5 h-5 rounded-full bg-[#ffa439]" />
+          <div className="w-1 sm:h-80 h-40 gold-gradient" />
         </div>
 
         <div>
           <h1 className={`${styles.heroHeadText} text-white`}>
-            Hi I'm <span className="text-[#915eff]">Faiz Mohamad</span>
+            Hi I'm <span className="text-[#ffa439]">Faiz Mohamad</span>
           </h1>
           <p className={`${styles.heroSubText} t-2 text-white-100`}>
             I develop 3D visuals, user <br className="sm:block hidden" />
