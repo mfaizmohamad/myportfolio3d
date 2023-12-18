@@ -30,6 +30,10 @@ import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 
+import shirt from './shirt.jpeg';
+import cabinmain from './cabinmain.jpeg';
+import mockup from './mockup.jpeg';
+
 export {
   logo,
   backend,
@@ -59,4 +63,7 @@ export {
   carrent,
   jobit,
   tripguide,
+  shirt,
+  cabinmain,
+  mockup,
 };
