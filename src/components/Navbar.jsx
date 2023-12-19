@@ -34,7 +34,7 @@ const Navbar = () => {
           </p>
         </Link>
 
-        <a href={Resume} download="Resume" target="_blank" className=" hover:bg-[#ffa439] text-white 
+        <a href={Resume} download="Resume" target="_blank" className=" hidden lg:block hover:bg-[#ffa439] text-white 
             font-bold text-[15px] py-2 px-4 
              hover:border-blue-500 rounded cursor-pointer">
             Download Resume
