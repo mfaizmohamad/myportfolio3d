@@ -12,6 +12,7 @@ import { fadeIn, textVariant } from '../utils/motion';
 import { FaGithub } from "react-icons/fa";
 import { FaLink } from "react-icons/fa";
 
+
 const ProjectCard = ({
   index,
   name,

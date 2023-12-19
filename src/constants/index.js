@@ -26,6 +26,7 @@ import {
   shirt,
   cabinmain,
   mockup,
+  reactlogo,
 } from "../assets";
 
 export const navLinks = [
@@ -49,15 +50,15 @@ const services = [
     icon: web,
   },
   {
-    title: "React Native Developer",
+    title: "React Developer",
     icon: mobile,
   },
   {
-    title: "Backend Developer",
+    title: "Frontend Developer",
     icon: backend,
   },
   {
-    title: "Content Creator",
+    title: "Threejs Developer",
     icon: creator,
   },
 ];
@@ -105,7 +106,7 @@ const technologies = [
 const projects = [
   {
     name: "Customize Shirt 3D",
-    icon: starbucks,
+    icon: reactlogo,
     iconBg: "#383E56",
     description:
       "Website for you to customize your own shirt design with 3D visualisation and stunning Animation.",
@@ -132,7 +133,7 @@ const projects = [
   },
   {
     name: "Cabin Maintenance Website",
-    icon: tesla,
+    icon: reactlogo,
     iconBg: "#E6DEDD",
     description:
       "Website for cabin maintenance daily use to easy access on date and reference.",
@@ -155,7 +156,7 @@ const projects = [
   },
   {
     name: "Mockup Portfolio",
-    icon: meta,
+    icon: reactlogo,
     iconBg: "#E6DEDD",
     description:
       "A mockup react portfolio website by applying HTML, CSS, Bootstrap and Javascript. ",

@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { styles } from "../styles";
 import { navLinks } from "../constants";
 import { logo, menu, close } from "../assets";
+import Resume from "../assets/faizmohamadResume.pdf";
 
 const Navbar = () => {
   const [active, setActive] = useState("");
@@ -32,6 +33,13 @@ const Navbar = () => {
             <span className="sm:block hidden">| Frontend Developer</span>
           </p>
         </Link>
+
+        <a href={Resume} download="Resume" target="_blank" className=" hover:bg-[#ffa439] text-white 
+            font-bold text-[15px] py-2 px-4 
+             hover:border-blue-500 rounded cursor-pointer">
+            Download Resume
+        </a>
+
         <ul className="list-none hidden sm:flex flex-row gap-10">
           {navLinks.map((nav) => (
             <li
