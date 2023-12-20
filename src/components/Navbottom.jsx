@@ -11,25 +11,25 @@ const Navbottom = () => {
   const [activeNav, setActiveNav] = useState("#");
   return (
     <nav className="navbottom">
-      <a href="/" 
+      <a href="/myportfolio3d/" 
       onClick={() => setActiveNav("/")}
       className={activeNav === "/" ? "active" : ""}>
         <IoHomeOutline />
       </a>
       <a
-        href="about"
+        href="/myportfolio3d/about"
         onClick={() => setActiveNav("about")}
         className={activeNav === "about" ? "active" : ""}
       >
         <FaRegUser />
       </a>
-      <a href="work"
+      <a href="/myportfolio3d/work"
          onClick={() => setActiveNav("work")}
          className={activeNav === "work" ? "active" : ""}
       >
         <BiBook/>
       </a>
-      <a href="contact"
+      <a href="/myportfolio3d/contact"
          onClick={() => setActiveNav("contact")}
          className={activeNav === "contact" ? "active" : ""}
       >

@@ -26,7 +26,7 @@ const Computers = ({ isMobile }) => {
 
       <Cloud
         scale={[0.05, 0.05, 0.05]}
-        position={[3, -1, -1]}
+        position={[3, -1, -1]} 
         rotation={[0, 0, 0]}
       />
 
