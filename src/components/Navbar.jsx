@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 import { styles } from "../styles";
 import { navLinks } from "../constants";
@@ -11,7 +11,7 @@ const Navbar = () => {
   const [toggle, setToggle] = useState(false);
 
   return (
-    <nav
+    <NavLink
       className={`
         ${styles.paddingX}
         w-full flex items-center py-5 fixed top-0 z-20
@@ -19,7 +19,7 @@ const Navbar = () => {
       `}
     >
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
-        <Link
+        <NavLink
           to="/myportfolio3d/"
           className="flex items-center gap-2"
           onClick={() => {
@@ -32,14 +32,14 @@ const Navbar = () => {
             Faiz Mohamad &nbsp;
             <span className="sm:block hidden">| Frontend Developer</span>
           </p>
-        </Link>
+        </NavLink>
 
         <a href={Resume} download="Resume" target="_blank" className=" hidden lg:block hover:bg-[#ffa439] text-white 
             font-bold text-[15px] py-2 px-4 
              hover:border-blue-500 rounded cursor-pointer">
             Download Resume
         </a>
-
+        
         <ul className="list-none hidden sm:flex flex-row gap-10">
           {navLinks.map((nav) => (
             <li
@@ -53,6 +53,7 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
+    
 
         <div className="sm:hidden flex flex-1 justify-end items-center">
           <img
@@ -87,7 +88,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-    </nav>
+    </NavLink>
   );
 };
 

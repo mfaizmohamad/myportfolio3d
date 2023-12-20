@@ -6,11 +6,12 @@ import { IoHomeOutline } from "react-icons/io5";
 import { RiServiceLine } from "react-icons/ri";
 import { BiMessageDetail } from "react-icons/bi";
 import { useState } from "react";
+import { NavLink } from "react-router-dom";
 
 const Navbottom = () => {
   const [activeNav, setActiveNav] = useState("#");
   return (
-    <nav className="navbottom">
+    <NavLink className="navbottom">
       <a href="/myportfolio3d/" 
       onClick={() => setActiveNav("/")}
       className={activeNav === "/" ? "active" : ""}>
@@ -35,7 +36,7 @@ const Navbottom = () => {
       >
         <BiMessageDetail />
       </a>
-    </nav>
+    </NavLink>
   );
 };
 
