@@ -8,35 +8,36 @@ import { BiMessageDetail } from "react-icons/bi";
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 
+
 const Navbottom = () => {
   const [activeNav, setActiveNav] = useState("#");
   return (
-    <NavLink className="navbottom">
-      <a href="/myportfolio3d/" 
+    <nav className="navbottom">
+      <NavLink to="/myportfolio3d/" 
       onClick={() => setActiveNav("/")}
       className={activeNav === "/" ? "active" : ""}>
         <IoHomeOutline />
-      </a>
-      <a
-        href="/myportfolio3d/about"
+      </NavLink>
+      <NavLink
+        to="/myportfolio3d/about"
         onClick={() => setActiveNav("about")}
         className={activeNav === "about" ? "active" : ""}
       >
         <FaRegUser />
-      </a>
-      <a href="/myportfolio3d/work"
+      </NavLink>
+      <NavLink to="/myportfolio3d/work"
          onClick={() => setActiveNav("work")}
          className={activeNav === "work" ? "active" : ""}
       >
         <BiBook/>
-      </a>
-      <a href="/myportfolio3d/contact"
+      </NavLink>
+      <NavLink to="/myportfolio3d/contact"
          onClick={() => setActiveNav("contact")}
          className={activeNav === "contact" ? "active" : ""}
       >
         <BiMessageDetail />
-      </a>
-    </NavLink>
+      </NavLink>
+    </nav>
   );
 };
 

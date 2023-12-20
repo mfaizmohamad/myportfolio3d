@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 import { styles } from "../styles";
 import { navLinks } from "../constants";
@@ -11,7 +11,7 @@ const Navbar = () => {
   const [toggle, setToggle] = useState(false);
 
   return (
-    <NavLink
+    <nav
       className={`
         ${styles.paddingX}
         w-full flex items-center py-5 fixed top-0 z-20
@@ -39,7 +39,7 @@ const Navbar = () => {
              hover:border-blue-500 rounded cursor-pointer">
             Download Resume
         </a>
-        
+
         <ul className="list-none hidden sm:flex flex-row gap-10">
           {navLinks.map((nav) => (
             <li
@@ -49,11 +49,10 @@ const Navbar = () => {
               } hover:text-white text-[18px] font-medium cursor-pointer`}
               onClick={() => setActive(nav.title)}
             >
-              <a href={`${nav.id}`}>{nav.title}</a>
+              <NavLink to={`${nav.id}`}>{nav.title}</NavLink>
             </li>
           ))}
         </ul>
-    
 
         <div className="sm:hidden flex flex-1 justify-end items-center">
           <img
@@ -81,14 +80,14 @@ const Navbar = () => {
                     setActive(nav.title);
                   }}
                 >
-                  <a href={`#${nav.id}`}>{nav.title}</a>
+                  <NavLink to={`#${nav.id}`}>{nav.title}</NavLink>
                 </li>
               ))}
             </ul>
           </div>
         </div>
       </div>
-    </NavLink>
+    </nav>
   );
 };
 
