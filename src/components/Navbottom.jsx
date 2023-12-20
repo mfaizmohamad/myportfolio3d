@@ -3,14 +3,13 @@ import "./Navbottom.css";
 import { FaRegUser } from "react-icons/fa";
 import { BiBook } from "react-icons/bi";
 import { IoHomeOutline } from "react-icons/io5";
-import { RiServiceLine } from "react-icons/ri";
 import { BiMessageDetail } from "react-icons/bi";
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 
 
 const Navbottom = () => {
-  const [activeNav, setActiveNav] = useState("#");
+  const [activeNav, setActiveNav] = useState("");
   return (
     <nav className="navbottom">
       <NavLink to="/myportfolio3d/" 

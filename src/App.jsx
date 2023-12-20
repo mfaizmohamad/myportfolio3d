@@ -10,11 +10,14 @@ import {
   Navbottom,
 } from "./components";
 
+import ScrollToTop from './components/ScrollToTop';
+
 const App = () => {
   return (
 
       <main className="relative z-0 bg-primary">
         <Router>
+          <ScrollToTop/>
           <Navbar/>
           <Routes>
           <Route path="/myportfolio3d/" element={<Hero />} /> 

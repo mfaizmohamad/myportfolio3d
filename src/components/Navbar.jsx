@@ -80,7 +80,7 @@ const Navbar = () => {
                     setActive(nav.title);
                   }}
                 >
-                  <NavLink to={`#${nav.id}`}>{nav.title}</NavLink>
+                  <NavLink to={`${nav.id}`}>{nav.title}</NavLink>
                 </li>
               ))}
             </ul>
