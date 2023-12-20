@@ -5,7 +5,6 @@ import {
   Contact,
   Hero,
   Navbar,
-  Tech,
   StarsCanvas,
   Works,
   Navbottom,
