@@ -90,7 +90,7 @@ const ProjectCard = ({
 
 const Works = () => {
   return (
-    <>
+    <section className="mt-20 md:mt-0">
       <motion.div variants={textVariant()}>
         <p className={`${styles.sectionSubText}`}>My Work</p>
         <h2 className={`${styles.sectionHeadText}`}>Projects</h2>
@@ -118,7 +118,7 @@ const Works = () => {
         </VerticalTimeline>
       </div>
 
-    </>
+    </section>
   )
 }
 

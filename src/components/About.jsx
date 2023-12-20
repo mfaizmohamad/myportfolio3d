@@ -40,7 +40,8 @@ const ServiceCard = ({ index, title, icon }) => {
 
 const About = () => {
   return (
-    <>
+    <section className="mt-20 md:mt-0">
+
       <motion.div variants={textVariant()}>
         <p className={styles.sectionSubText}>Introduction</p>
         <h2 className={styles.sectionHeadText}>Overview.</h2>
@@ -71,7 +72,7 @@ const About = () => {
         </div>
       ))}
       </div> 
-    </>
+    </section>
   );
 };
 
