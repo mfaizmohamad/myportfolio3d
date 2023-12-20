@@ -7,6 +7,8 @@ import { styles } from "../styles";
 import { services } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
 import { SectionWrapper } from "../hoc";
+import { BallCanvas } from './canvas';
+import { technologies } from '../constants';
 
 const ServiceCard = ({ index, title, icon }) => {
 
@@ -55,11 +57,20 @@ const About = () => {
         together to bring your ideas to life!
       </motion.p>
 
+
       <div className="mt-20 flex flex-wrap gap-10">
         {services.map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service} />
         ))}
       </div>
+        
+      <div className=' mt-10 flex flex-row flex-wrap justify-center gap-10'>
+      {technologies.map((technology) => (
+        <div className='w-28 h-28' key={technology.name}>
+          <BallCanvas icon={technology.icon} />
+        </div>
+      ))}
+      </div> 
     </>
   );
 };

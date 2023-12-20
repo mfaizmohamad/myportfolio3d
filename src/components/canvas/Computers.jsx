@@ -1,17 +1,16 @@
-import React, { Suspense, useEffect, useState } from 'react';
-import { Canvas } from '@react-three/fiber';
-import { OrbitControls, Preload, useGLTF } from '@react-three/drei';
+import React, { Suspense, useEffect, useState } from "react";
+import { Canvas } from "@react-three/fiber";
+import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
+import { IslandScene, DragonScene, Cloud } from "../../models";
 
-import CanvasLoader from '../Loader';
+import CanvasLoader from "../Loader";
 
-const Computers = ({isMobile}) => {
-  const computer = useGLTF("./desktop_pc/scene.gltf");
-
+const Computers = ({ isMobile }) => {
   return (
     <mesh>
-      <hemisphereLight intensity={1.5} groundColor="black"/>
-      <pointLight intensity={1}/>
-      <spotLight 
+      <hemisphereLight intensity={1.5} groundColor="black" />
+      <pointLight intensity={1} />
+      <spotLight
         position={[-20, 50, 10]}
         angle={0.12}
         penumbra={1}
@@ -19,22 +18,44 @@ const Computers = ({isMobile}) => {
         castShadow
         shadow-mapsize={1024}
       />
-      <primitive
-       object={computer.scene}
-       scale={isMobile ? 0.35 : 0.6}
-       position={isMobile ? [0, -2, -0.6] : [0, -3.25, -1.3]}
-       rotation={[-0.01, -0.2, -0.1]}
+      <Cloud
+        scale={[0.1, 0.1, 0.1]}
+        position={[0, 0.3, -1]}
+        rotation={[0, 0, 0]}
+      />
+
+      <Cloud
+        scale={[0.05, 0.05, 0.05]}
+        position={[3, -1, -1]}
+        rotation={[0, 0, 0]}
+      />
+
+      <Cloud
+        scale={[0.05, 0.05, 0.05]}
+        position={[-3, -1, -1]}
+        rotation={[0, 0, 0]}
+      />
+
+      <DragonScene
+        scale={[30, 30, 30]}
+        position={[1, 0.2, 0.5]}
+        rotation={[0, 0, 0]}
+      />
+      <IslandScene
+        scale={[0.01, 0.01, 0.01]}
+        position={[0.5, -1.5, 0]}
+        rotation={[0, 0, 0]}
       />
     </mesh>
-  )
-}
+  );
+};
 
 const ComputersCanvas = () => {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     // Add a listener for changes to the screen size
-    const mediaQuery = window.matchMedia ("(max-width: 500px)");
+    const mediaQuery = window.matchMedia("(max-width: 500px)");
     // Set the initial value of the `isMobile` state variable
     setIsMobile(mediaQuery.matches);
 
@@ -52,27 +73,26 @@ const ComputersCanvas = () => {
     };
   }, []);
 
-
   return (
     <Canvas
-      frameloop='demand'
+      frameloop="demand"
       shadows
       dpr={[1, 2]}
-      camera={{ position: [20, 3, 5], fov: 25}}
-      gl={{ preserveDrawingBuffer: true}}
+      camera={{ position: [20, 3, 5], fov: 25 }}
+      gl={{ preserveDrawingBuffer: true }}
     >
-      <Suspense fallback={<CanvasLoader/>}>
-        <OrbitControls 
+      <Suspense fallback={<CanvasLoader />}>
+        <OrbitControls
           enableZoom={false}
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}
         />
-        <Computers isMobile={isMobile}/>
+        <Computers isMobile={isMobile} />
       </Suspense>
 
       <Preload all />
     </Canvas>
-  )
-}
- 
-export default ComputersCanvas
+  );
+};
+
+export default ComputersCanvas;

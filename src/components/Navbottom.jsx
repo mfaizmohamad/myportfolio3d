@@ -11,27 +11,27 @@ const Navbottom = () => {
   const [activeNav, setActiveNav] = useState("#");
   return (
     <nav className="navbottom">
-      <a href="#" 
-      onClick={() => setActiveNav("#")}
-      className={activeNav === "#" ? "active" : ""}>
+      <a href="/" 
+      onClick={() => setActiveNav("/")}
+      className={activeNav === "/" ? "active" : ""}>
         <IoHomeOutline />
       </a>
       <a
-        href="#about"
-        onClick={() => setActiveNav("#about")}
-        className={activeNav === "#about" ? "active" : ""}
+        href="about"
+        onClick={() => setActiveNav("about")}
+        className={activeNav === "about" ? "active" : ""}
       >
         <FaRegUser />
       </a>
-      <a href="#work"
-         onClick={() => setActiveNav("#work")}
-         className={activeNav === "#work" ? "active" : ""}
+      <a href="work"
+         onClick={() => setActiveNav("work")}
+         className={activeNav === "work" ? "active" : ""}
       >
         <BiBook/>
       </a>
-      <a href="#contact"
-         onClick={() => setActiveNav("#contact")}
-         className={activeNav === "#contact" ? "active" : ""}
+      <a href="contact"
+         onClick={() => setActiveNav("contact")}
+         className={activeNav === "contact" ? "active" : ""}
       >
         <BiMessageDetail />
       </a>

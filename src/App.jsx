@@ -1,4 +1,4 @@
-import { BrowserRouter } from "react-router-dom";
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 
 import {
   About,
@@ -13,18 +13,21 @@ import {
 
 const App = () => {
   return (
-    <BrowserRouter>
-      <div className="relative z-0 bg-primary">
-        <Navbar/>
-        <Hero/>
-        <Navbottom/>
-        <About/>
-        <Tech/>
-        <Works/>
-        <Contact/>
-        <StarsCanvas/>
-      </div>
-    </BrowserRouter>
+
+      <main className="relative z-0 bg-primary">
+        <Router>
+          <Navbar/>
+          <Routes>
+          <Route path="/myportfolio3d/" element={<Hero />} /> 
+          <Route path="/myportfolio3d/about" element={<About />}/>           
+          <Route path="/myportfolio3d/work" element={<Works />} />      
+          <Route path="/myportfolio3d/contact" element={<Contact/>} />      
+          </Routes>
+          <Navbottom/>
+          <StarsCanvas/>
+        </Router>
+      </main>
+
   )
 };
 
